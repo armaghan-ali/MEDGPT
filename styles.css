@@ -1,0 +1,167 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #FF7F50, #1E90FF);
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+.container {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 400px;
+    height: 550px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header {
+    background: #FF6347;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+.header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.header .title {
+    color: #1E90FF;
+}
+
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+    background: #F0F8FF;
+    border-radius: 0 0 15px 15px;
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #E6E6FA;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.message {
+    margin: 10px 0;
+}
+
+.message p {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.message.user {
+   align-self: flex-end;
+}
+
+.message.bot {
+   align-self: flex-start;
+}
+
+.message.user p {
+    
+    background-color: #1E90FF;
+    color: white;
+    text-align: right;
+}
+
+.message.bot p {
+    background-color: #FF6347;
+    color: white;
+    text-align: left;
+
+}
+
+.input-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#user-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #333;
+    background-color: #F5F5F5;
+   
+}
+
+#send-btn {
+    padding: 10px 15px;
+    background-color: #FF6347;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: #FF4500;
+}
+
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #333;
+    text-align: center;
+}
+#output {
+    color: black;
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+}
+#visit-btn {
+    background-color: #08a192;
+    color:white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 10px;
+    border-radius: 5px;
+    margin-left: 20px; 
+
+}
+#visit-btn:hover {
+    background-color: #0056b3; 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 12px rgba(243, 127, 127, 0.863);}
+
+#visit-btn a:visited {
+    color: white;
+}
+#visit-btn a {
+    text-decoration: none;
+}
