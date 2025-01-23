@@ -1,3 +1,31 @@
+class Queue {
+    constructor() {
+        this.items = [];
+    }
+
+    // Add an item to the queue
+    enqueue(item) {
+        this.items.push(item);
+    }
+
+    // Remove and return the first item from the queue
+    dequeue() {
+        if (this.isEmpty()) {
+            return null;
+        }
+        return this.items.shift();
+    }
+
+    // Check if the queue is empty
+    isEmpty() {
+        return this.items.length === 0;
+    }
+
+    // Get the size of the queue
+    size() {
+        return this.items.length;
+    }
+}
 const messageQueue = []; // Queue holds the user messages
 let isProcessing = false; // Flag to indicate if a message is being processed
 
@@ -9,6 +37,7 @@ function sendMessage() {
     messageQueue.push(userInput);
     processQueue();
 }
+
 
 function processQueue() {
     if (isProcessing || messageQueue.length === 0) return;
@@ -22,8 +51,10 @@ function processQueue() {
     userMessage.textContent = `User: ${currentMessage}`;
     messagesDiv.appendChild(userMessage);
 
+
     const botMessage = document.createElement('div');
     botMessage.textContent = `Bot:  ${currentMessage}`;
+
     setTimeout(() => {
         messagesDiv.appendChild(botMessage);
         isProcessing = false; 
@@ -90,8 +121,9 @@ form.addEventListener('submit', function(event) {
             
             // Reset the buffer
             responseBuffer = "";
-        }   
+        }
     });
+
 
     websocket.addEventListener("close", (event) => {
         console.log("Connection closed", event.code, event.reason);
